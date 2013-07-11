@@ -30,7 +30,10 @@ var menu = {
 	
 	tabOption: function(evt) {
 		// Update select option
-		console.log(this);
+		if ($(this).attr('id') != $('option:selected', menu.selectMenu).val()) {
+			// Find option with matching value and set as selected:
+			$('option[value="' + $(this).attr('id') + '"]', menu.selectMenu).attr('selected', 'selected');			
+		}
 	},
 	
 	getOptionValue: function() {
