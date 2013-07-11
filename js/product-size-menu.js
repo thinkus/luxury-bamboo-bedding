@@ -24,10 +24,12 @@ var menu = {
 	},
 	
 	selectOption: function(evt) {
+		// Update selected tab
 		console.log($(':selected', evt.target));
 	},
 	
 	tabOption: function(evt) {
+		// Update select option
 		console.log(this);
 	},
 	
