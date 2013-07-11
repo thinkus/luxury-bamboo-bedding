@@ -67,7 +67,6 @@ var menu = {
 				// Set selected tab:
 				$('a', tabs).removeClass('selected');
 				$('a', tabs[i]).addClass('selected');
-				
 				// Change select option:
 				$('option[value="' + $('a', tabs[i]).attr('id') + '"]', menu.selectMenu).attr('selected', 'selected');
 			} 
