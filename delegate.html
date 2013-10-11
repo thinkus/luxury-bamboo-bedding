@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Delegate Demo</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	</head>
+	<body>
+		<form>
+			<select onchange="javascript:updateNextOption('77', '1', this.value, '2', '', '', '');" id="options">
+				<option>Double</option>
+				<option>Queen</option>
+			</select>
+		</form>
+		<script>
+			$('#options').change(function() {
+				console.log('changeFirst');
+				console.log($('#options').attr('onchange'));
+			});
+			
+			function updateNextOption() {
+				console.log('changeSecond');
+			}
+		</script>
+	</body>
+</html>
