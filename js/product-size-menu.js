@@ -36,7 +36,9 @@ var menu = {
 			$('a', menu.tabMenu).removeClass('selected');
 			$(this).addClass('selected');
 			// Find option with matching value of the tab id and set as selected:
-			$('option[value="' + $(this).attr('id') + '"]', menu.selectMenu).attr('selected', 'selected');			
+			$('option[value="' + $(this).attr('id') + '"]', menu.selectMenu).attr('selected', 'selected');
+			// Initiate onchange event to update colour picker
+			menu.selectMenu.onchange();		
 		}
 	},
 	
